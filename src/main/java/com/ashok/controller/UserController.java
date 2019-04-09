@@ -20,6 +20,7 @@ public class UserController {
 
 	@RequestMapping(value = "/regUser.htm", method = RequestMethod.POST)
 	public String regUser(Model model, @ModelAttribute("user") User u) {
+		System.out.println("this is regUser() method");
 		model.addAttribute("user", u);
 		return "display";
 	}
